@@ -4,6 +4,7 @@
 - menu - 1 get fibonacci number at position x
 - menu - 2 get whole fibonacci sequence for x positions
 - menu - 3 get sum of fibonacci sequence for x positions
+- when long is too long it gets negative, ... (float is better but optically not pleasing)
 
 ## wip
 - OOP

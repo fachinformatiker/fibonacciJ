@@ -6,4 +6,5 @@ public interface constants {
     String NFE_ERROR = "The first argument must be an integer.";
     String ENTER_POSITIVE_NUMBER = "Please enter a positive number";
     String FIBONACCI_TEXT = " is the fibonacci number at position ";
+    String DEBUG_TEXT = "The fibonacci number I'm at now is: ";
 }

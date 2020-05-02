@@ -6,10 +6,10 @@ import app.fachinformatiker.constants.constants;
 public class Fiboloop {
 
     public static int ARG;
-    public static int M;
-    public static int N;
-    public static int FIBONACCI;
-    public static int TEMP;
+    public static long M;
+    public static long N;
+    public static long FIBONACCI;
+    public static long TEMP;
     public static boolean ERROR;
     public static boolean MENU;
     public static boolean TEST;
@@ -40,7 +40,7 @@ public class Fiboloop {
                     FIBONACCI = M + N;
                     M = N;
                     N = FIBONACCI;
-                    Debug.returnInfo("The fibonacci number I'm at now is: " + FIBONACCI);
+                    Debug.returnInfo(constants.DEBUG_TEXT + FIBONACCI);
                 }
                 System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + number);
         }
