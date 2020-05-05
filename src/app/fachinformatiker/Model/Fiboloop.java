@@ -1,6 +1,7 @@
 package app.fachinformatiker.Model;
 
 import app.fachinformatiker.Utility.Debug;
+import app.fachinformatiker.Utility.FileHandler;
 import app.fachinformatiker.constants.constants;
 
 public class Fiboloop {
@@ -30,10 +31,12 @@ public class Fiboloop {
             case 1:
                 FIBONACCI = M;
                 System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
+                FileHandler.writeToFile(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
                 break;
             case 2:
                 FIBONACCI = N;
                 System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
+                FileHandler.writeToFile(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
                 break;
             default:
                 for (int i = 3; i <= number; i++) {
@@ -41,6 +44,7 @@ public class Fiboloop {
                     M = N;
                     N = FIBONACCI;
                     Debug.returnInfo(constants.DEBUG_TEXT + FIBONACCI);
+                    FileHandler.writeToFile(constants.DEBUG_TEXT + FIBONACCI);
                 }
                 System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + number);
         }
