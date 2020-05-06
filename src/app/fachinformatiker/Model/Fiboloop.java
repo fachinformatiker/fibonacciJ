@@ -24,6 +24,8 @@ public class Fiboloop {
         ERROR = false;
         MENU = false;
         TEST = false;
+
+        FileHandler.initializeFile();
     }
 
     public void startFibonacci(int number) {
@@ -47,6 +49,7 @@ public class Fiboloop {
                     FileHandler.writeToFile(constants.DEBUG_TEXT + FIBONACCI);
                 }
                 System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + number);
+                FileHandler.writeToFile(FIBONACCI + constants.FIBONACCI_TEXT + number);
         }
     }
 

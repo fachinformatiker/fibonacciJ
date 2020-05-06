@@ -1,6 +1,7 @@
 package app.fachinformatiker;
 
 import app.fachinformatiker.Utility.Debug;
+import app.fachinformatiker.Utility.FileHandler;
 import app.fachinformatiker.constants.constants;
 import app.fachinformatiker.Model.Fiboloop;
 
@@ -10,7 +11,7 @@ public class fibonacciJ {
 
         Fiboloop fiboloop = new Fiboloop();
         fiboloop.initialize();
-        Debug.setDebug(true);
+        Debug.setDebug(false);
 
         if (args.length == 0) {
             Fiboloop.MENU = true;
@@ -22,12 +23,14 @@ public class fibonacciJ {
             }
             catch (NumberFormatException nfe) {
                 System.out.println(constants.NFE_ERROR);
+                FileHandler.writeToFile(constants.NFE_ERROR);
                 Fiboloop.ERROR = true;
                 System.exit(1);
             }
 
             if (Fiboloop.ARG < 0) {
                 System.out.println(constants.ENTER_POSITIVE_NUMBER);
+                FileHandler.writeToFile(constants.ENTER_POSITIVE_NUMBER);
                 Fiboloop.ERROR = true;
                 System.exit(1);
             }
