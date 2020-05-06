@@ -4,13 +4,16 @@ import app.fachinformatiker.Utility.Debug;
 import app.fachinformatiker.Utility.FileHandler;
 import app.fachinformatiker.constants.constants;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+
 public class Fiboloop {
 
     public static int ARG;
-    public static long M;
-    public static long N;
-    public static long FIBONACCI;
-    public static long TEMP;
+    public static double M;
+    public static double N;
+    public static double FIBONACCI;
+    public static double TEMP;
     public static boolean ERROR;
     public static boolean MENU;
     public static boolean TEST;
@@ -45,11 +48,11 @@ public class Fiboloop {
                     FIBONACCI = M + N;
                     M = N;
                     N = FIBONACCI;
-                    Debug.returnInfo(constants.DEBUG_TEXT + FIBONACCI);
-                    FileHandler.writeToFile(constants.DEBUG_TEXT + FIBONACCI);
+                    Debug.returnInfo(constants.DEBUG_TEXT + new BigDecimal(FIBONACCI).toPlainString());
+                    FileHandler.writeToFile(constants.DEBUG_TEXT + new BigDecimal(FIBONACCI).toPlainString());
                 }
-                System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + number);
-                FileHandler.writeToFile(FIBONACCI + constants.FIBONACCI_TEXT + number);
+                System.out.println(new BigDecimal(FIBONACCI).toPlainString() + constants.FIBONACCI_TEXT + number);
+                FileHandler.writeToFile(new BigDecimal(FIBONACCI).toPlainString() + constants.FIBONACCI_TEXT + number);
         }
     }
 

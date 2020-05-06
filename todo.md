@@ -1,7 +1,6 @@
 # todo
 
 ## todo
-- when long is too long it gets negative, ... (float is better but optically not pleasing)
 - new function inform() -> will replace System.out... and Debug.returnInfo(). check if debug=true
 
 ## wip
@@ -16,3 +15,4 @@
 - error handling
 - write log for debugging (for every step)
 - start without number (fibonacciJ.jar) to show menu
+- when long is too long it gets negative, ... (float is better but optically not pleasing)
