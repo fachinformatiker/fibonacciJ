@@ -2,6 +2,7 @@
 
 ## todo
 - when long is too long it gets negative, ... (float is better but optically not pleasing)
+- new function inform() -> will replace System.out... and Debug.returnInfo(). check if debug=true
 
 ## wip
 - OOP
