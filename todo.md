@@ -2,6 +2,8 @@
 
 ## todo
 - new function inform() -> will replace System.out... and Debug.returnInfo(). check if debug=true
+- GUI (when started without arguments show GUI)
+- change arguments to "-help, -position x, -sum x, ..."
 
 ## wip
 - OOP
