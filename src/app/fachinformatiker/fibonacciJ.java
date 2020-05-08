@@ -12,6 +12,7 @@ public class fibonacciJ {
         Fiboloop fiboloop = new Fiboloop();
         fiboloop.initialize();
         Debug.setDebug(false);
+        Debug.setLog(true);
 
         if (args.length == 0) {
             Fiboloop.MENU = true;
@@ -22,15 +23,15 @@ public class fibonacciJ {
                 Fiboloop.ARG = Integer.parseInt(args[0]);
             }
             catch (NumberFormatException nfe) {
-                System.out.println(constants.NFE_ERROR);
-                FileHandler.writeToFile(constants.NFE_ERROR);
+                Debug.inform(constants.NFE_ERROR);
+                //FileHandler.writeToFile(constants.NFE_ERROR);
                 Fiboloop.ERROR = true;
                 System.exit(1);
             }
 
             if (Fiboloop.ARG < 0) {
-                System.out.println(constants.ENTER_POSITIVE_NUMBER);
-                FileHandler.writeToFile(constants.ENTER_POSITIVE_NUMBER);
+                Debug.inform(constants.ENTER_POSITIVE_NUMBER);
+                //FileHandler.writeToFile(constants.ENTER_POSITIVE_NUMBER);
                 Fiboloop.ERROR = true;
                 System.exit(1);
             }

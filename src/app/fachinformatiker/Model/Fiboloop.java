@@ -17,6 +17,8 @@ public class Fiboloop {
     public static boolean ERROR;
     public static boolean MENU;
     public static boolean TEST;
+    public static int ATPOSITION;
+    public static double SUM;
 
     public void initialize() {
         ARG = 0;
@@ -27,6 +29,8 @@ public class Fiboloop {
         ERROR = false;
         MENU = false;
         TEST = false;
+        ATPOSITION = 0;
+        SUM = 0;
 
         FileHandler.initializeFile();
     }
@@ -35,25 +39,33 @@ public class Fiboloop {
         switch (Fiboloop.ARG) {
             case 1:
                 FIBONACCI = M;
-                System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
-                FileHandler.writeToFile(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
+                Debug.inform(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
                 break;
             case 2:
                 FIBONACCI = N;
-                System.out.println(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
-                FileHandler.writeToFile(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
+                Debug.inform(FIBONACCI + constants.FIBONACCI_TEXT + ARG);
                 break;
             default:
                 for (int i = 3; i <= number; i++) {
                     FIBONACCI = M + N;
                     M = N;
                     N = FIBONACCI;
-                    Debug.returnInfo(constants.DEBUG_TEXT + new BigDecimal(FIBONACCI).toPlainString());
-                    FileHandler.writeToFile(constants.DEBUG_TEXT + new BigDecimal(FIBONACCI).toPlainString());
+                    Debug.inform(constants.DEBUG_TEXT + new BigDecimal(FIBONACCI).toPlainString());
                 }
-                System.out.println(new BigDecimal(FIBONACCI).toPlainString() + constants.FIBONACCI_TEXT + number);
-                FileHandler.writeToFile(new BigDecimal(FIBONACCI).toPlainString() + constants.FIBONACCI_TEXT + number);
+                Debug.inform(new BigDecimal(FIBONACCI).toPlainString() + constants.FIBONACCI_TEXT + number);
         }
+    }
+
+    public static void getAtPosition(int position) {
+
+    }
+
+    public static void getSum(int forSum) {
+
+    }
+
+    public static void getSequence(int forSequence) {
+
     }
 
     public void showMenu() {
